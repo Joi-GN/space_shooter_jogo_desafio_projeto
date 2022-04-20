@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +12,35 @@
 
     <title>Space Shooter Game</title>
 </head>
-<body>
-    <h1>👽Space Shooter Game🛸</h1>
 
-    <div id="game-area">
+<body>
+    <header>
+        <h1>👽Space Shooter Game🛸</h1>
+        <div class="scoreboard">
+            <p id="life">Vidas: 👽👽👽</p>
+            <p id="score">Pontuação: 0</p>
+        </div>
+    </header>
+
+    <main id="game-area">
         <img src="assets/imgs/player.png" class="player">
-    </div>
+        <div class="menu">
+            <div class="instructions">
+                <h4>
+                    Instruções
+                </h4>
+                <p>
+                    Utilize as setas de cima e baixo do teclado para movimentar a sua nave e atire pressionando a barra
+                    de espaço.
+                    <br><br>
+                    Não deixe os inimigos passarem!
+                    <br><br>
+                    Para melhor experiência, pressione a tecla F11 para entrar em modo tela cheia.
+                </p>
+            </div>
+            <button class="start-button" onclick="playGame()">Jogar</button>
+        </div>
+    </main>
 
     <footer>
         <a href="https://www.linkedin.com/in/joice-gomes-dn/" target="_blank">LinkedIn</a>
@@ -24,4 +48,5 @@
         <a href="https://github.com/Joi-GN" target="_blank">Github</a>
     </footer>
 </body>
+
 </html>

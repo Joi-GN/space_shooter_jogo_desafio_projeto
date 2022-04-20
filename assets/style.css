@@ -12,38 +12,111 @@ body{
     width: 100vw;
 }
 
+.scoreboard{
+    display: flex;
+    font-size: 1.2em;
+    gap: 6em;
+    justify-content: space-evenly;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+h1,h4{
+    margin: 0;
+}
+
 #game-area{
     background: url(imgs/space-blue.png);
     background-size: cover;
     border: 1px solid white;
     border-radius: 4em;
-    margin: 1em 0;
+    position: relative;
     height: 500px;
-    width: 600px;
+    width: 700px;
+}
+
+.menu{
+    background-color: #f4f4f4d6;
+    border-radius: 2em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.instructions{
+    color: blue;
+}
+
+.instructions p{
+    font-weight: 500;
+}
+
+.start-button{
+    border: none;
+    border-radius: 2em;
+    background-color:darkblue;
+    color: white;
+    font-weight: 700;
+    padding: 0.5em 5em;
+    cursor: pointer;
+}
+
+.start-button:hover{
+    opacity: 0.8;
 }
 
 .player{
-    position: relative;
-    height: 60px;
-    width: 70px;
+    position: absolute;
+    height: 70px;
+    width: 80px;
     left: 20px;
     top: 200px;
 }
 
 .laser{
-    position: relative;
+    position: absolute;
     height: 40px;
-    width: 30px;
+    width: 40px;
+}
+
+.enemy{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+.enemy-transition{
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.dead{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    opacity: 0;
 }
 
 footer{
     display: flex;
     align-items: center;
     gap: 5em;
+    margin-top: 1em;
 }
 
 footer p,a{
     color: white;
-    font-size: 0.7em;
+    font-size: 0.8em;
     text-decoration: none;
+}
+
+footer a:hover{
+    color: dodgerblue;
+    text-shadow: darkblue 2px 2px;
+    transition: color 0.5s;
 }
